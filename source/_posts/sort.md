@@ -2,11 +2,12 @@
 title: 常用排序算法Java语言实现
 date: 2017-06-06 12:39:04
 tags: [算法]
+category: [Algorithm]
 ---
 
 ## **冒泡排序**
 #### 算法原理:
-> 
+>
 1.比较相邻的元素。 如果第一个比第二个大，就交换他们两个。
 2.对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。 在这一点，最后的元素应该会是最大的数。
 3.针对所有的元素重复以上的步骤，除了最后一个。
@@ -14,7 +15,7 @@ tags: [算法]
 <!-- more -->
 #### 代码实现：
 
-```
+```java
     public int[] bubbleSort(int[] array){
         for(int i=0;i<array.length-1;i++){
             for(int j=0;j<array.length-1-i;j++){
@@ -31,7 +32,7 @@ tags: [算法]
 #### 上面代码是没有经过优化的代码，如果我们想进行优化，那该怎么优化呢？因为上面的代码每次都会去比较前一个值和后一个值的大小，当我们发现在比较的过程中有一组值没有交换，则说明该元素之后的元素都是有序的，所以该元素之后的比较次数其实是多余，因此，我们增加一个bool变量标识在比较的过程中，是否有元素进行了交换，代码如下。
 #### 改良后的冒泡排序代码实现：
 
-```
+```java
  public int[] bubbleSortPro(int[] array){
         boolean isContinue=true;
         for(int i=0;i<array.length-1&&isContinue;i++){
@@ -41,7 +42,7 @@ tags: [算法]
                     int temp = array[j];
                     array[j]=array[j+1];
                     array[j+1]=temp;
-                    isContinue=false;
+                    isContinue=true;
                 }
             }
         }
@@ -53,7 +54,7 @@ O(n2)
 
 ## **选择排序**
 #### 算法原理：
-> 
+>
 > 1.在长度为N的无序数组中，第一次遍历n-1个数，找到最小的数值与第一个元素交换；
  2.第二次遍历n-2个数，找到最小的数值与第二个元素交换；
  3.第n-1次遍历，找到最小的数值与第n-1个元素交换，排序完成。
@@ -63,7 +64,7 @@ O(n2)
 
 #### 代码实现：
 
-```
+```java
 public static int[] selectionSort(int[] array) {
         for (int i = 0; i < array.length - 1; i++) {
             int min = i;
@@ -95,7 +96,7 @@ O(n2)
 
 #### 代码实现：
 
-```
+```java
 public static int[] insertionSort(int[] array) {
         for (int i = 0; i < array.length - 1; i++) {
             for (int j = i + 1; j >= 0; i--) {
@@ -112,6 +113,3 @@ public static int[] insertionSort(int[] array) {
     }
 
 ```
-
-
-

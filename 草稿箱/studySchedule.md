@@ -2,6 +2,7 @@
 title: 学习计划
 date: 2017-06-09 22:47:10
 tags: sechdule
+categories: [Life]
 ---
 
 |学习内容|开始时间|预估时间|完成情况|

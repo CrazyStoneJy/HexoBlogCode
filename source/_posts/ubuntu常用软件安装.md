@@ -2,6 +2,7 @@
 title: Ubuntu 常用软件安装与Android环境配置
 date: 2017-06-06 22:04:26
 tags: [Linux,Ubuntu]
+categories: [Operation System]
 ---
 
 ### **安装QQ(2012QQ国际版)**
