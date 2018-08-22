@@ -23,6 +23,7 @@ static final int hash(Object key) {
 使用该算法原因是因为与运算，位运算等在计算机中运算计较高效，为什么？？查资料作证．
 
 
+<!-- more -->
 
 HashMap的put方法调用，put方法实际调用的是putVal这个方法，接下来分析一下putVal方法．
 
@@ -187,7 +188,7 @@ final Node<K,V>[] resize() {
     }
 ```
 
-
+将链表转换为红黑树的数据结构
 ```java
  final void treeify(Node<K,V>[] tab) {
             TreeNode<K,V> root = null;
@@ -222,6 +223,7 @@ final Node<K,V>[] resize() {
                                 xp.left = x;
                             else
                                 xp.right = x;
+                            //上面的操作是通过比较key的hash值来生成一个二叉搜索树，下面balanceInsertion这个方法主要是按照红黑树的规则来进行插入的一个算法．
                             root = balanceInsertion(root, x);
                             break;
                         }

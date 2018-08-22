@@ -189,7 +189,7 @@ Response getResponseWithInterceptorChain() throws IOException {
 
 以上就是OkHttp同步网络请求的大致流程.
 
-### OkHttp异步网络请求
+## OkHttp异步网络请求
 
 异步请求和同步请求的最大区别是:同步请求需要自己创建线程管理线程,而异步请求则是用OkHttp Dispatcher中的线程进行请求.client.enqueue(request)实际上是调用的RealCall的enqueue方法,我们看看RealCall的enqueue.
 
@@ -311,17 +311,18 @@ finished方法主要是将执行完后的线程从**运行请求队列**中移�
 ```
 promoteCalls方法是将**待请求队列**中的线程移动到**运行中队列**.
 
-<!-- 到这里异步请求也基本上分析完了,好,现在我们将流程图画出来,总结总结.
+## OKHttp Intercept
 
-
-{% plantuml %}
-  @startuml
-  start
-  :创建OkHttpClient(Create ConnectionPool,Dispatcher),Request;
-  :newCall;
-  stop
-  @enduml
-{% endplantuml %} -->
+这里是对okhttp拦截器的总结
+|拦截器|作用|
+|----|----|
+|client.interceptors()|开发者自定义的拦截器|
+|retryAndFollowUpInterceptor|失败重定向拦截器(内部实现还未研究明白)|
+|BridgeInterceptor|主要用作生成或者解析http的报文格式|
+|CacheInterceptor|响应体的缓存|
+|ConnectInterceptor|连接拦截器|
+|client.networkInterceptors()|开发者自定的网络拦截器|
+|CallServerInterceptor|请求服务器的拦截器|
 
 
 

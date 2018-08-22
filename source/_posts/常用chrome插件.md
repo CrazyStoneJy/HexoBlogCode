@@ -11,6 +11,8 @@ categories: [chrome]
 
 - Adblock Plus 是一款用来过滤视频广告的神器，推荐长时间看视频的网友可以安装，土豪或vip用户请无视
 
+<!--  more -->
+
 - Momentum　这是我最喜欢的一个插件，对于我这种懒癌患者简直是个福音，能够提高极大的专注度.这样的chrome tab页面是不是很赞,美丽的风景画简直是赏心悦目，中间还有每天专注的事项，简直棒极了有木有.
 
 ![Ｍonemtum](http://or5n6ccgu.bkt.clouddn.com/17-11-22/92108550.jpg)

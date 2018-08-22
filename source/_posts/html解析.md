@@ -17,6 +17,9 @@ python爬虫的html解析器我目前使用了lxml和BeautifulSoup两种,接下�
     ```
     $ pip install lxml
     ```
+
+<!--  more -->
+
 2. **lxml使用** 
 
     安装好以后,就可以使用lxml来进行xpath解析了,还不知道xpath??传送们:[xpath介绍](http://www.runoob.com/xpath/xpath-tutorial.html)

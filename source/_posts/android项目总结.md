@@ -21,5 +21,3 @@ categories: [android]
 - 项目架构使用MVP模式
 
 <!-- more -->
-
-###

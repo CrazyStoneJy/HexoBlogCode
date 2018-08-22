@@ -12,20 +12,23 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
-root: /
+# url: http://yoursite.com
+# root: /
+url: http://crazystonejy.github.io/blog
+root: /blog/
+public_dir: public/blog
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
 # Directory
 source_dir: source
-public_dir: public
+# public_dir: public
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: skill/**
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -69,7 +72,9 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/CrazyStoneJy/crazystonejy.github.io.git
+  repository: 
+    github: https://github.com/CrazyStoneJy/crazystonejy.github.io.git
+    coding: https://git.coding.net/crazystonejy/crazystonejy.coding.me.git
   branch: master
 
 # =============================================================================

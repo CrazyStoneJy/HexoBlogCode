@@ -7,6 +7,8 @@ tags: linux
 ### 定时执行一个任务
 - crontab -e 可编辑当前用户状态下的定时任务
 
+<!--  more -->
+
 #### 编写定时任务的格式
 
 分 时 日 月 星期 要运行的命令
@@ -48,6 +50,12 @@ tags: linux
 查看cron service的状态
 
 - sudo /etc/init.d/cron status
+
+**注意**: 在执行shell脚本时,需要使用chmod命令让shell脚本可执行.
+
+shell 脚本后台运行,实例:
+
+* * * * * test.sh
 
 ### 给桌面发送通知消息的命令
 

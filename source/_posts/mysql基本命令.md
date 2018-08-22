@@ -13,6 +13,8 @@ $ sudo apt install mysql-client
 $ sudo apt install libmysqlclient-dev
 ```
 
+<!--  more -->
+
 安装完以后测试，mysql服务是否启动，
 
 ```
@@ -86,3 +88,4 @@ mysql> GRANT ALL PRIVILEGES ON *.* TO 'yourname'@'localhost' IDENTIFIED BY 'your
 参考资料:
 [在Ubuntu16.04下安装mysql](http://blog.csdn.net/xiangwanpeng/article/details/54562362)
 [关于 MySQL root 账号的默认密码](https://segmentfault.com/a/1190000002498643)
+[mysql5.7更改用户名密码](https://unix.stackexchange.com/questions/291319/how-to-change-mysql-root-password-using-mysql-v5-7)
