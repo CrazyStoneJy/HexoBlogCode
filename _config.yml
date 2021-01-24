@@ -74,7 +74,6 @@ deploy:
   type: git
   repository: 
     github: https://github.com/CrazyStoneJy/crazystonejy.github.io.git
-    coding: https://git.coding.net/crazystonejy/crazystonejy.coding.me.git
   branch: master
 
 # =============================================================================
